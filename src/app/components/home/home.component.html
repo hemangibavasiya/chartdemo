@@ -6,10 +6,40 @@
             </div>   
         </div>
         <div class="col col-md-6">
-            <div class="col-md-12">
-                <h1 >{{ per}} %</h1>
-                  
+            <div class="col-md-12 perBox">
+                <span class="per"  >{{ per}} %</span> &nbsp;<span class='fa fa-long-arrow-up fa-4x' style='color: #E06666;' aria-hidden="true"></span>
+            </div>
+            <div class="col-md-12 flex-container perBox">
+                <div class='fa fa-user fa-4x flex-child'></div> 
+                <div>
+                    <label>Name: Hemangi Bavasiya</label><br>
+                    <label>UserName: Heer</label><br>
+                    <label>Email ID: hemangibavasiya08@gmail.com</label>
+                </div>
             </div>
         </div>
     </div>
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">S No</th>
+            <th scope="col">Name</th>
+            <th scope="col">UserName</th>
+            <th scope="col">City</th>
+            <th scope="col">Pincode</th>
+            <th scope="col">Company Name</th>
+
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of tableData">
+                <th  scope="row">{{user.S_No}}</th>
+                <td>{{user.Name}}</td>
+                <td>{{user.Username}}</td>
+                <td>{{user.City}}</td>
+                <td>{{user.Pincode}}</td>
+                <td>{{user.Company_Name}}</td>
+            </tr>
+        </tbody>
+        </table>
 </div>

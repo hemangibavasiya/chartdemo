@@ -10,7 +10,7 @@ export class PublicService {
     private http: HttpClient
   ) { }
   getData() {
-    let url = "https://jsonplaceholder.typicode.com/users"
-    return this.http.get(url).pipe(map(response => {return response}))
+    const url = 'https://jsonplaceholder.typicode.com/users';
+    return this.http.get(url).pipe(map(response => {return response; }));
   }
 }
